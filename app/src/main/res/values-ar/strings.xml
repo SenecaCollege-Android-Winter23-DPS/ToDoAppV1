@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">تطبيق المهام</string>
+    <string name="isurgent">هل هو مستعجل؟</string>
+    <string name="add_new_task">أضف مهمة جديدة</string>
+    <string name="add_new_task_fragment">إضافة مهمة جديدة Fragment</string>
+    <string name="close_the_app">أغلق التطبيق</string>
+    <string name="save">حفظ</string>
+    <string name="cancel">إغلاق</string>
+    <string name="hinttext">إضف مهمة جديدة</string>
+    <string name="menu">القائمة الرئيسية</string>
+
+</resources>

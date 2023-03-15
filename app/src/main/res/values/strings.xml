@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MidTermTest_Winter23</string>
+    <string name="isurgent">Is Urgent?</string>
+    <string name="add_new_task">Add New Task</string>
+    <string name="add_new_task_fragment">Add New Task Fragment</string>
+    <string name="close_the_app">Close the app</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="hinttext">Add New Task</string>
+    <string name="menu">mainMenu</string>
+
+</resources>
