@@ -3,6 +3,7 @@
 <item android:id="@+id/addNewTodoID"
     android:title="@string/add_new_task"/>
     <item android:id="@+id/addfragment" android:title="@string/add_new_task_fragment"/>
+   <item android:id="@+id/deleteAllTasks" android:title="@string/delete_all_tasks"/>
     <item android:id="@+id/closeID"
         android:title="@string/close_the_app"/>
 

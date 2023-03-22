@@ -23,15 +23,6 @@ public class AddNewToDoFragment extends DialogFragment {
     }
     FragmentClickListener listener;
 
-//    @NonNull
-//    @Override
-//    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
-//        return new AlertDialog.Builder(requireContext())
-//                .setMessage("THis is my first dialog fragment")
-//                .setPositiveButton("OK", (dialog, which) -> {} )
-//                .create();
-//    }
-
 
     @Nullable
     @Override

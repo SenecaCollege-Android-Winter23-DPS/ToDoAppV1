@@ -8,5 +8,6 @@
     <string name="cancel">Cancel</string>
     <string name="hinttext">Add New Task</string>
     <string name="menu">mainMenu</string>
+    <string name="delete_all_tasks">Delete All Tasks</string>
 
 </resources>

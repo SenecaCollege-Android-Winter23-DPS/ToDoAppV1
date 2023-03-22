@@ -9,5 +9,6 @@
     <string name="cancel">إغلاق</string>
     <string name="hinttext">إضف مهمة جديدة</string>
     <string name="menu">القائمة الرئيسية</string>
+    <string name="delete_all_tasks">احذف كل المهام</string>
 
 </resources>

@@ -40,11 +40,13 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tasks = ((MyApp)getApplication()).taskArrayList;
         recyclerList = findViewById(R.id.recycler_list);
 //        list = findViewById(R.id.listoftasks);
    //     TasksBaseAdapter baseadapter = new TasksBaseAdapter(tasks,this);
 //        list.setAdapter(adapter);
+
+       tasks = FileStorageManager.getAllToDosFromTheFile(this);
+        ((MyApp)getApplication()).taskArrayList = tasks;
         adapter = new TasksRecyclerViewAdapter(tasks, this);
         adapter.listener = this;
 
@@ -60,6 +62,8 @@ public class MainActivity extends AppCompatActivity
                             Intent data = result.getData();
                             Task newToDo = data.getParcelableExtra("newTodo");
                             tasks.add(newToDo);
+                            FileStorageManager.writeNewToDoToTheFile(newToDo, MainActivity.this);
+
                             adapter.notifyDataSetChanged();
                         }
                     }
@@ -90,6 +94,16 @@ public class MainActivity extends AppCompatActivity
                 // open a new fragment
                 break;
             }
+            case R.id.deleteAllTasks:{
+               // FileStorageManager.deleteAllTodosFromTheFile(this);
+                FileStorageManager.deleteOneTaskAt(2,this);
+
+                tasks = FileStorageManager.getAllToDosFromTheFile(this);
+                ((MyApp)getApplication()).taskArrayList = tasks;
+                adapter.taskArrayList = tasks;
+                adapter.notifyDataSetChanged();
+                break;
+            }
 
             case R.id.closeID:{
                 finish();
@@ -109,6 +123,7 @@ public class MainActivity extends AppCompatActivity
     public void fragmentSavedATask(Task newTask) {
         tasks.add(newTask);
         adapter.notifyDataSetChanged();
+        FileStorageManager.writeNewToDoToTheFile(newTask, this);
 
     }
 

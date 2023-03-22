@@ -16,7 +16,6 @@ import java.util.ArrayList;
 public class TasksRecyclerViewAdapter
         extends RecyclerView.Adapter<TasksRecyclerViewAdapter.TasksViewHolder>
 {
-
     interface ToDoClickListener {
         void todoSelected(int index);
     }
